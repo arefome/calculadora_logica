@@ -1,4 +1,4 @@
-# Calculadora Logica
+# Calculadora Lógica
 ---
 ## Integrantes
 - Ariel Ernesto Forero Meneses 20181020135
