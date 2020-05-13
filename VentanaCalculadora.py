@@ -84,6 +84,7 @@ class VentanaCalculadora(tk.Tk):
     
     def limpiar(self):
         self.pantalla.delete(0, 'end')
+        self.cadena = ''
     
     
     def mostrar_resultado(self):
@@ -93,6 +94,7 @@ class VentanaCalculadora(tk.Tk):
         print(aux)
         print(var)
         print(table)
+        print(table.valuation())
     
     def configurar_boton(self, boton):
         boton.config(
