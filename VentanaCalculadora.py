@@ -88,12 +88,15 @@ class VentanaCalculadora(tk.Tk):
     
     
     def mostrar_resultado(self):
-        aux = cadena.proposicion(self.cadena)
-        var = cadena.variables(self.cadena)
-        table = ttg.Truths(var, [aux])
-        print(aux)
-        print(table)
-        print(table.valuation())
+        try:    
+            aux = cadena.proposicion(self.cadena)
+            var = cadena.variables(self.cadena)
+            table = ttg.Truths(var, [aux])
+            print(aux)
+            print(table)
+            print(table.valuation())
+        except:
+            print('Entrada invalida')
     
     def configurar_boton(self, boton):
         boton.config(
