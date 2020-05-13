@@ -6,6 +6,7 @@ def proposicion(p):
 	p = aux.replace('↔', ' = ', p.count("↔"))
 
 	return p
+
 def variables(s):
 	variables = ''
 	if("p" in s and "q" in s and "r" in s):
