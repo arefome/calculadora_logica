@@ -1,6 +1,7 @@
 import tkinter as tk
 import cadena
 import ttg
+import os
 
 class VentanaCalculadora(tk.Tk): 
     
@@ -80,6 +81,7 @@ class VentanaCalculadora(tk.Tk):
     def escribir(self, caracter):
         self.pantalla.insert(self.pantalla.index(tk.INSERT),caracter)
         self.cadena = self.cadena + caracter
+        os.system('cls')
 
     
     def limpiar(self):
@@ -95,7 +97,7 @@ class VentanaCalculadora(tk.Tk):
             print(aux)
             print(table)
             print(table.valuation())
-        except:
+        except BaseException:
             print('Entrada invalida')
     
     def configurar_boton(self, boton):
