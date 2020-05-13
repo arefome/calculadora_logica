@@ -1,5 +1,6 @@
 import tkinter as tk
-
+import cadena
+import ttg
 
 class VentanaCalculadora(tk.Tk): 
     
@@ -70,24 +71,30 @@ class VentanaCalculadora(tk.Tk):
         btnParentesisC = tk.Button(self, text=')', command = lambda: self.escribir(')'))
         self.configurar_boton(btnParentesisC)
         btnParentesisC.grid(row=4, column=1)
+
+        self.cadena = ''
         
         self.mainloop()
 
     
     def escribir(self, caracter):
         self.pantalla.insert(self.pantalla.index(tk.INSERT),caracter)
+        self.cadena = self.cadena + caracter
 
     
     def limpiar(self):
         self.pantalla.delete(0, 'end')
+        self.cadena = ''
     
     
     def mostrar_resultado(self):
-        try:
-            '''Operaciones logicas, mostrar tabla'''
-        except:
-            print('Expresion no valida o no disponible')
-    
+        aux = cadena.proposicion(self.cadena)
+        var = cadena.variables(self.cadena)
+        table = ttg.Truths(var, [aux])
+        print(aux)
+        print(var)
+        print(table)
+        print(table.valuation())
     
     def configurar_boton(self, boton):
         boton.config(
