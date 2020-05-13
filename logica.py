@@ -16,3 +16,6 @@ def op_bicondicional(var1, var2):
 def negar(var):
 	return np.logical_not(var)
 
+def evaluar(exp):
+	
+	
