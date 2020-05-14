@@ -83,6 +83,7 @@ class VentanaCalculadora(tk.Tk):
     
     def limpiar(self):
         self.pantalla.delete(0, 'end')
+        os.system('cls')
     
     
     def mostrar_resultado(self):
