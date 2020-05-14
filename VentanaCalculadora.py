@@ -73,26 +73,22 @@ class VentanaCalculadora(tk.Tk):
         self.configurar_boton(btnParentesisC)
         btnParentesisC.grid(row=4, column=1)
 
-        self.cadena = ''
-        
         self.mainloop()
 
     
     def escribir(self, caracter):
         self.pantalla.insert(self.pantalla.index(tk.INSERT),caracter)
-        self.cadena = self.cadena + caracter
         os.system('cls')
 
     
     def limpiar(self):
         self.pantalla.delete(0, 'end')
-        self.cadena = ''
     
     
     def mostrar_resultado(self):
         try:    
-            aux = cadena.proposicion(self.cadena)
-            var = cadena.variables(self.cadena)
+            aux = cadena.proposicion(self.input)
+            var = cadena.variables(self.input)
             table = ttg.Truths(var, [aux])
             print(aux)
             print(table)
