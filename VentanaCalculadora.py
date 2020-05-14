@@ -87,8 +87,8 @@ class VentanaCalculadora(tk.Tk):
     
     def mostrar_resultado(self):
         try:    
-            aux = cadena.proposicion(self.input)
-            var = cadena.variables(self.input)
+            aux = cadena.proposicion(self.input.get())
+            var = cadena.variables(self.input.get())
             table = ttg.Truths(var, [aux])
             print(aux)
             print(table)
